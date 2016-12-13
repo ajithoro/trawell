@@ -87,7 +87,7 @@ extension FirstViewController: UITableViewDataSource, UITableViewDelegate {
     }
 }
 
-extension FirstViewController: UICollectionViewDataSource, UICollectionViewDelegate {
+extension FirstViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return self.places.count
@@ -105,6 +105,10 @@ extension FirstViewController: UICollectionViewDataSource, UICollectionViewDeleg
         return cell!
     }
     
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        return UIEdgeInsets(top: 0, left: 30, bottom: 0, right: 30)
+    }
+
 }
 
 

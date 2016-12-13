@@ -22,6 +22,7 @@
 		4F6754431E00953B00154835 /* leh.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F67543D1E00953B00154835 /* leh.png */; };
 		4F6754461E00957D00154835 /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F6754451E00957D00154835 /* Place.swift */; };
 		4F67544A1E00992600154835 /* placeholder.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F6754491E00992600154835 /* placeholder.png */; };
+		4F67544C1E009FB200154835 /* CustomFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F67544B1E009FB200154835 /* CustomFlowLayout.swift */; };
 		CE0FD86B1DF89FC100D7BEE4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0FD86A1DF89FC100D7BEE4 /* AppDelegate.swift */; };
 		CE0FD8721DF89FC100D7BEE4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE0FD8701DF89FC100D7BEE4 /* Main.storyboard */; };
 		CE0FD8741DF89FC100D7BEE4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE0FD8731DF89FC100D7BEE4 /* Assets.xcassets */; };
@@ -44,6 +45,7 @@
 		4F67543D1E00953B00154835 /* leh.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = leh.png; path = assets/leh.png; sourceTree = "<group>"; };
 		4F6754451E00957D00154835 /* Place.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Place.swift; path = models/Place.swift; sourceTree = "<group>"; };
 		4F6754491E00992600154835 /* placeholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = placeholder.png; path = assets/placeholder.png; sourceTree = "<group>"; };
+		4F67544B1E009FB200154835 /* CustomFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomFlowLayout.swift; path = helpers/CustomFlowLayout.swift; sourceTree = "<group>"; };
 		CE0FD8671DF89FC100D7BEE4 /* TraWell.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TraWell.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE0FD86A1DF89FC100D7BEE4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE0FD8711DF89FC100D7BEE4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -77,6 +79,7 @@
 			isa = PBXGroup;
 			children = (
 				4F4DEF051E0036A000ABD29E /* Constants.swift */,
+				4F67544B1E009FB200154835 /* CustomFlowLayout.swift */,
 			);
 			name = helpers;
 			sourceTree = "<group>";
@@ -233,6 +236,7 @@
 				4F4DEF031E002E3900ABD29E /* BaseViewController.swift in Sources */,
 				CE0FD86B1DF89FC100D7BEE4 /* AppDelegate.swift in Sources */,
 				4F4DEF001E002E0800ABD29E /* FirstViewController.swift in Sources */,
+				4F67544C1E009FB200154835 /* CustomFlowLayout.swift in Sources */,
 				4F4DEF091E003EE900ABD29E /* PlaceTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
