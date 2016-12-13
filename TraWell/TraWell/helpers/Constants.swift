@@ -7,7 +7,9 @@
 //
 
 import Foundation
+import CoreGraphics
 
 let kCellTableView: String = "CellTableView"
 let kCellCollectionView: String = "CellCollectionView"
 let kCellDefault: String = "CellDefault"
+let kInsetOffset: CGFloat = 30.0
