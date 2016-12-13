@@ -18,6 +18,7 @@ class FirstViewController: BaseViewController {
         // Do any additional setup after loading the view, typically from a nib.
         self.tableViewPlaces.delegate = self
         self.tableViewPlaces.dataSource = self
+        self.tableViewPlaces.register(UITableViewCell.classForCoder(), forCellReuseIdentifier: kCellDefault)
     }
 
     override func didReceiveMemoryWarning() {
@@ -38,9 +39,13 @@ extension FirstViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: kCellTableView, for: indexPath) as? PlaceTableViewCell
-        cell?.backgroundColor = UIColor.clear
-        return cell!
+        if indexPath.section == 0 {
+            let cell = tableView.dequeueReusableCell(withIdentifier: kCellTableView, for: indexPath) as? PlaceTableViewCell
+            cell?.backgroundColor = UIColor.clear
+            return cell!
+        }
+        let cell = tableView.dequeueReusableCell(withIdentifier: kCellDefault, for: indexPath)
+        return cell
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
@@ -56,7 +61,6 @@ extension FirstViewController: UITableViewDataSource, UITableViewDelegate {
         }
         placeTableViewCell.setCollectionViewDataSourceDelegate(dataSourceDelegate: self, forRow: indexPath.row)
 //        placeTableViewCell.collectionViewOffset = self.storedOffsets[indexPath.row] ?? 0
-
     }
     
     func tableView(_ tableView: UITableView, didEndDisplaying cell: UITableViewCell, forRowAt indexPath: IndexPath) {
@@ -64,6 +68,7 @@ extension FirstViewController: UITableViewDataSource, UITableViewDelegate {
             return
         }
 //        self.storedOffsets[indexPath.row] = placeTableViewCell.collectionViewOffset
+        
     }
 }
 
@@ -78,6 +83,7 @@ extension FirstViewController: UICollectionViewDataSource, UICollectionViewDeleg
         cell.backgroundColor = UIColor.green
         return cell
     }
+    
 }
 
 

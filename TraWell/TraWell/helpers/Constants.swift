@@ -10,3 +10,4 @@ import Foundation
 
 let kCellTableView: String = "CellTableView"
 let kCellCollectionView: String = "CellCollectionView"
+let kCellDefault: String = "CellDefault"
