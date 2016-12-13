@@ -11,6 +11,7 @@ import UIKit
 class FirstViewController: BaseViewController {
     
     @IBOutlet weak var tableViewPlaces: UITableView!
+    var places:[Place] = [Place]()
 //    var storedOffsets = [Int: CGFloat]()
 
     override func viewDidLoad() {
@@ -19,6 +20,20 @@ class FirstViewController: BaseViewController {
         self.tableViewPlaces.delegate = self
         self.tableViewPlaces.dataSource = self
         self.tableViewPlaces.register(UITableViewCell.classForCoder(), forCellReuseIdentifier: kCellDefault)
+        
+        let bangalore:Place = Place(name: "Bangalore", imageName: "bangalore")
+        let chennai:Place = Place(name: "Chennai", imageName: "chennai")
+        let kolkata:Place = Place(name: "Kolkata", imageName: "kolkata")
+        let delhi:Place = Place(name: "Delhi", imageName: "delhi")
+        let leh:Place = Place(name: "Leh", imageName: "leh")
+        let andaman:Place = Place(name: "Andaman", imageName: "andaman")
+        
+        self.places.append(bangalore)
+        self.places.append(chennai)
+        self.places.append(kolkata)
+        self.places.append(delhi)
+        self.places.append(leh)
+        self.places.append(andaman)
     }
 
     override func didReceiveMemoryWarning() {
@@ -75,13 +90,19 @@ extension FirstViewController: UITableViewDataSource, UITableViewDelegate {
 extension FirstViewController: UICollectionViewDataSource, UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 6
+        return self.places.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: kCellCollectionView, for: indexPath)
-        cell.backgroundColor = UIColor.green
-        return cell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: kCellCollectionView, for: indexPath) as? PlaceCollectionViewCell
+        cell?.backgroundColor = UIColor.green
+        if let image = UIImage(named: self.places[indexPath.row].imageName ?? "") {
+            cell?.imageViewPlace.image = image
+        } else if let image = UIImage(named: "placeholder") {
+            cell?.imageViewPlace.image = image
+        }
+        cell?.labelPlace.text = self.places[indexPath.row].name ?? ""
+        return cell!
     }
     
 }

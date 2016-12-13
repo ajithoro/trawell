@@ -12,6 +12,16 @@
 		4F4DEF031E002E3900ABD29E /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F4DEF021E002E3900ABD29E /* BaseViewController.swift */; };
 		4F4DEF061E0036A000ABD29E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F4DEF051E0036A000ABD29E /* Constants.swift */; };
 		4F4DEF091E003EE900ABD29E /* PlaceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F4DEF081E003EE900ABD29E /* PlaceTableViewCell.swift */; };
+		4F4DEF0C1E00856200ABD29E /* PlaceCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F4DEF0A1E00856200ABD29E /* PlaceCollectionViewCell.swift */; };
+		4F4DEF0D1E00856200ABD29E /* PlaceCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F4DEF0B1E00856200ABD29E /* PlaceCollectionViewCell.xib */; };
+		4F67543E1E00953B00154835 /* andaman.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F6754381E00953B00154835 /* andaman.png */; };
+		4F67543F1E00953B00154835 /* bangalore.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F6754391E00953B00154835 /* bangalore.png */; };
+		4F6754401E00953B00154835 /* chennai.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F67543A1E00953B00154835 /* chennai.png */; };
+		4F6754411E00953B00154835 /* delhi.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F67543B1E00953B00154835 /* delhi.png */; };
+		4F6754421E00953B00154835 /* kolkata.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F67543C1E00953B00154835 /* kolkata.png */; };
+		4F6754431E00953B00154835 /* leh.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F67543D1E00953B00154835 /* leh.png */; };
+		4F6754461E00957D00154835 /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F6754451E00957D00154835 /* Place.swift */; };
+		4F67544A1E00992600154835 /* placeholder.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F6754491E00992600154835 /* placeholder.png */; };
 		CE0FD86B1DF89FC100D7BEE4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0FD86A1DF89FC100D7BEE4 /* AppDelegate.swift */; };
 		CE0FD8721DF89FC100D7BEE4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE0FD8701DF89FC100D7BEE4 /* Main.storyboard */; };
 		CE0FD8741DF89FC100D7BEE4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE0FD8731DF89FC100D7BEE4 /* Assets.xcassets */; };
@@ -24,6 +34,16 @@
 		4F4DEF021E002E3900ABD29E /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BaseViewController.swift; path = viewcontrollers/BaseViewController.swift; sourceTree = "<group>"; };
 		4F4DEF051E0036A000ABD29E /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Constants.swift; path = helpers/Constants.swift; sourceTree = "<group>"; };
 		4F4DEF081E003EE900ABD29E /* PlaceTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlaceTableViewCell.swift; path = customcells/PlaceTableViewCell.swift; sourceTree = "<group>"; };
+		4F4DEF0A1E00856200ABD29E /* PlaceCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlaceCollectionViewCell.swift; path = customcells/PlaceCollectionViewCell.swift; sourceTree = "<group>"; };
+		4F4DEF0B1E00856200ABD29E /* PlaceCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PlaceCollectionViewCell.xib; path = customcells/PlaceCollectionViewCell.xib; sourceTree = "<group>"; };
+		4F6754381E00953B00154835 /* andaman.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = andaman.png; path = assets/andaman.png; sourceTree = "<group>"; };
+		4F6754391E00953B00154835 /* bangalore.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bangalore.png; path = assets/bangalore.png; sourceTree = "<group>"; };
+		4F67543A1E00953B00154835 /* chennai.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = chennai.png; path = assets/chennai.png; sourceTree = "<group>"; };
+		4F67543B1E00953B00154835 /* delhi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = delhi.png; path = assets/delhi.png; sourceTree = "<group>"; };
+		4F67543C1E00953B00154835 /* kolkata.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = kolkata.png; path = assets/kolkata.png; sourceTree = "<group>"; };
+		4F67543D1E00953B00154835 /* leh.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = leh.png; path = assets/leh.png; sourceTree = "<group>"; };
+		4F6754451E00957D00154835 /* Place.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Place.swift; path = models/Place.swift; sourceTree = "<group>"; };
+		4F6754491E00992600154835 /* placeholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = placeholder.png; path = assets/placeholder.png; sourceTree = "<group>"; };
 		CE0FD8671DF89FC100D7BEE4 /* TraWell.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TraWell.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE0FD86A1DF89FC100D7BEE4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE0FD8711DF89FC100D7BEE4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -65,8 +85,32 @@
 			isa = PBXGroup;
 			children = (
 				4F4DEF081E003EE900ABD29E /* PlaceTableViewCell.swift */,
+				4F4DEF0A1E00856200ABD29E /* PlaceCollectionViewCell.swift */,
+				4F4DEF0B1E00856200ABD29E /* PlaceCollectionViewCell.xib */,
 			);
 			name = customcells;
+			sourceTree = "<group>";
+		};
+		4F6754371E00952A00154835 /* assets */ = {
+			isa = PBXGroup;
+			children = (
+				4F6754491E00992600154835 /* placeholder.png */,
+				4F6754381E00953B00154835 /* andaman.png */,
+				4F6754391E00953B00154835 /* bangalore.png */,
+				4F67543A1E00953B00154835 /* chennai.png */,
+				4F67543B1E00953B00154835 /* delhi.png */,
+				4F67543C1E00953B00154835 /* kolkata.png */,
+				4F67543D1E00953B00154835 /* leh.png */,
+			);
+			name = assets;
+			sourceTree = "<group>";
+		};
+		4F6754441E00955F00154835 /* models */ = {
+			isa = PBXGroup;
+			children = (
+				4F6754451E00957D00154835 /* Place.swift */,
+			);
+			name = models;
 			sourceTree = "<group>";
 		};
 		CE0FD85E1DF89FC100D7BEE4 = {
@@ -88,6 +132,8 @@
 		CE0FD8691DF89FC100D7BEE4 /* TraWell */ = {
 			isa = PBXGroup;
 			children = (
+				4F6754441E00955F00154835 /* models */,
+				4F6754371E00952A00154835 /* assets */,
 				4F4DEF071E003E7500ABD29E /* customcells */,
 				4F4DEF041E00367B00ABD29E /* helpers */,
 				4F4DEEFD1E002DF000ABD29E /* viewcontrollers */,
@@ -159,9 +205,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F4DEF0D1E00856200ABD29E /* PlaceCollectionViewCell.xib in Resources */,
 				CE0FD8771DF89FC100D7BEE4 /* LaunchScreen.storyboard in Resources */,
+				4F6754421E00953B00154835 /* kolkata.png in Resources */,
+				4F6754431E00953B00154835 /* leh.png in Resources */,
+				4F6754411E00953B00154835 /* delhi.png in Resources */,
 				CE0FD8741DF89FC100D7BEE4 /* Assets.xcassets in Resources */,
+				4F6754401E00953B00154835 /* chennai.png in Resources */,
 				CE0FD8721DF89FC100D7BEE4 /* Main.storyboard in Resources */,
+				4F67543E1E00953B00154835 /* andaman.png in Resources */,
+				4F67544A1E00992600154835 /* placeholder.png in Resources */,
+				4F67543F1E00953B00154835 /* bangalore.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -172,8 +226,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F4DEF0C1E00856200ABD29E /* PlaceCollectionViewCell.swift in Sources */,
 				4F4DEF061E0036A000ABD29E /* Constants.swift in Sources */,
 				4F4DEF011E002E0800ABD29E /* SecondViewController.swift in Sources */,
+				4F6754461E00957D00154835 /* Place.swift in Sources */,
 				4F4DEF031E002E3900ABD29E /* BaseViewController.swift in Sources */,
 				CE0FD86B1DF89FC100D7BEE4 /* AppDelegate.swift in Sources */,
 				4F4DEF001E002E0800ABD29E /* FirstViewController.swift in Sources */,

@@ -16,6 +16,8 @@ class PlaceTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        let nib:UINib = UINib(nibName: "PlaceCollectionViewCell", bundle: nil)
+        self.collectionViewPlaces.register(nib, forCellWithReuseIdentifier: kCellCollectionView)
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
