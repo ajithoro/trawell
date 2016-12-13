@@ -11,6 +11,7 @@ import UIKit
 class FirstViewController: BaseViewController {
     
     @IBOutlet weak var tableViewPlaces: UITableView!
+//    var storedOffsets = [Int: CGFloat]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,7 +27,7 @@ class FirstViewController: BaseViewController {
 
 }
 
-extension FirstViewController: UITableViewDataSource {
+extension FirstViewController: UITableViewDataSource, UITableViewDelegate {
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 5
@@ -37,12 +38,9 @@ extension FirstViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: kCellTableView, for: indexPath)
-        /*
-        cell.textLabel?.text = "abc"
-        cell.backgroundColor = UIColor.red
-        */
-        return cell
+        let cell = tableView.dequeueReusableCell(withIdentifier: kCellTableView, for: indexPath) as? PlaceTableViewCell
+        cell?.backgroundColor = UIColor.clear
+        return cell!
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
@@ -51,10 +49,35 @@ extension FirstViewController: UITableViewDataSource {
         }
         return nil
     }
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        guard let placeTableViewCell = cell as? PlaceTableViewCell else {
+            return
+        }
+        placeTableViewCell.setCollectionViewDataSourceDelegate(dataSourceDelegate: self, forRow: indexPath.row)
+//        placeTableViewCell.collectionViewOffset = self.storedOffsets[indexPath.row] ?? 0
+
+    }
+    
+    func tableView(_ tableView: UITableView, didEndDisplaying cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        guard let placeTableViewCell = cell as? PlaceTableViewCell else {
+            return
+        }
+//        self.storedOffsets[indexPath.row] = placeTableViewCell.collectionViewOffset
+    }
 }
 
-extension FirstViewController: UITableViewDelegate {
+extension FirstViewController: UICollectionViewDataSource, UICollectionViewDelegate {
     
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 6
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: kCellCollectionView, for: indexPath)
+        cell.backgroundColor = UIColor.green
+        return cell
+    }
 }
 
 
