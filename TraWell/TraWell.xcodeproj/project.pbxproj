@@ -10,6 +10,7 @@
 		4F4DEF001E002E0800ABD29E /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F4DEEFE1E002E0800ABD29E /* FirstViewController.swift */; };
 		4F4DEF011E002E0800ABD29E /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F4DEEFF1E002E0800ABD29E /* SecondViewController.swift */; };
 		4F4DEF031E002E3900ABD29E /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F4DEF021E002E3900ABD29E /* BaseViewController.swift */; };
+		4F4DEF061E0036A000ABD29E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F4DEF051E0036A000ABD29E /* Constants.swift */; };
 		CE0FD86B1DF89FC100D7BEE4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0FD86A1DF89FC100D7BEE4 /* AppDelegate.swift */; };
 		CE0FD8721DF89FC100D7BEE4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE0FD8701DF89FC100D7BEE4 /* Main.storyboard */; };
 		CE0FD8741DF89FC100D7BEE4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE0FD8731DF89FC100D7BEE4 /* Assets.xcassets */; };
@@ -20,6 +21,7 @@
 		4F4DEEFE1E002E0800ABD29E /* FirstViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FirstViewController.swift; path = viewcontrollers/FirstViewController.swift; sourceTree = "<group>"; };
 		4F4DEEFF1E002E0800ABD29E /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SecondViewController.swift; path = viewcontrollers/SecondViewController.swift; sourceTree = "<group>"; };
 		4F4DEF021E002E3900ABD29E /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BaseViewController.swift; path = viewcontrollers/BaseViewController.swift; sourceTree = "<group>"; };
+		4F4DEF051E0036A000ABD29E /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Constants.swift; path = helpers/Constants.swift; sourceTree = "<group>"; };
 		CE0FD8671DF89FC100D7BEE4 /* TraWell.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TraWell.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE0FD86A1DF89FC100D7BEE4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE0FD8711DF89FC100D7BEE4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -49,6 +51,14 @@
 			name = viewcontrollers;
 			sourceTree = "<group>";
 		};
+		4F4DEF041E00367B00ABD29E /* helpers */ = {
+			isa = PBXGroup;
+			children = (
+				4F4DEF051E0036A000ABD29E /* Constants.swift */,
+			);
+			name = helpers;
+			sourceTree = "<group>";
+		};
 		CE0FD85E1DF89FC100D7BEE4 = {
 			isa = PBXGroup;
 			children = (
@@ -68,6 +78,7 @@
 		CE0FD8691DF89FC100D7BEE4 /* TraWell */ = {
 			isa = PBXGroup;
 			children = (
+				4F4DEF041E00367B00ABD29E /* helpers */,
 				4F4DEEFD1E002DF000ABD29E /* viewcontrollers */,
 				CE0FD86A1DF89FC100D7BEE4 /* AppDelegate.swift */,
 				CE0FD8701DF89FC100D7BEE4 /* Main.storyboard */,
@@ -150,6 +161,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F4DEF061E0036A000ABD29E /* Constants.swift in Sources */,
 				4F4DEF011E002E0800ABD29E /* SecondViewController.swift in Sources */,
 				4F4DEF031E002E3900ABD29E /* BaseViewController.swift in Sources */,
 				CE0FD86B1DF89FC100D7BEE4 /* AppDelegate.swift in Sources */,
