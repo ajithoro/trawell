@@ -7,19 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4F4DEF001E002E0800ABD29E /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F4DEEFE1E002E0800ABD29E /* FirstViewController.swift */; };
+		4F4DEF011E002E0800ABD29E /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F4DEEFF1E002E0800ABD29E /* SecondViewController.swift */; };
+		4F4DEF031E002E3900ABD29E /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F4DEF021E002E3900ABD29E /* BaseViewController.swift */; };
 		CE0FD86B1DF89FC100D7BEE4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0FD86A1DF89FC100D7BEE4 /* AppDelegate.swift */; };
-		CE0FD86D1DF89FC100D7BEE4 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0FD86C1DF89FC100D7BEE4 /* FirstViewController.swift */; };
-		CE0FD86F1DF89FC100D7BEE4 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0FD86E1DF89FC100D7BEE4 /* SecondViewController.swift */; };
 		CE0FD8721DF89FC100D7BEE4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE0FD8701DF89FC100D7BEE4 /* Main.storyboard */; };
 		CE0FD8741DF89FC100D7BEE4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE0FD8731DF89FC100D7BEE4 /* Assets.xcassets */; };
 		CE0FD8771DF89FC100D7BEE4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE0FD8751DF89FC100D7BEE4 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4F4DEEFE1E002E0800ABD29E /* FirstViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FirstViewController.swift; path = viewcontrollers/FirstViewController.swift; sourceTree = "<group>"; };
+		4F4DEEFF1E002E0800ABD29E /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SecondViewController.swift; path = viewcontrollers/SecondViewController.swift; sourceTree = "<group>"; };
+		4F4DEF021E002E3900ABD29E /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BaseViewController.swift; path = viewcontrollers/BaseViewController.swift; sourceTree = "<group>"; };
 		CE0FD8671DF89FC100D7BEE4 /* TraWell.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TraWell.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE0FD86A1DF89FC100D7BEE4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CE0FD86C1DF89FC100D7BEE4 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		CE0FD86E1DF89FC100D7BEE4 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		CE0FD8711DF89FC100D7BEE4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CE0FD8731DF89FC100D7BEE4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE0FD8761DF89FC100D7BEE4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -37,6 +39,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4F4DEEFD1E002DF000ABD29E /* viewcontrollers */ = {
+			isa = PBXGroup;
+			children = (
+				4F4DEEFE1E002E0800ABD29E /* FirstViewController.swift */,
+				4F4DEEFF1E002E0800ABD29E /* SecondViewController.swift */,
+				4F4DEF021E002E3900ABD29E /* BaseViewController.swift */,
+			);
+			name = viewcontrollers;
+			sourceTree = "<group>";
+		};
 		CE0FD85E1DF89FC100D7BEE4 = {
 			isa = PBXGroup;
 			children = (
@@ -56,9 +68,8 @@
 		CE0FD8691DF89FC100D7BEE4 /* TraWell */ = {
 			isa = PBXGroup;
 			children = (
+				4F4DEEFD1E002DF000ABD29E /* viewcontrollers */,
 				CE0FD86A1DF89FC100D7BEE4 /* AppDelegate.swift */,
-				CE0FD86C1DF89FC100D7BEE4 /* FirstViewController.swift */,
-				CE0FD86E1DF89FC100D7BEE4 /* SecondViewController.swift */,
 				CE0FD8701DF89FC100D7BEE4 /* Main.storyboard */,
 				CE0FD8731DF89FC100D7BEE4 /* Assets.xcassets */,
 				CE0FD8751DF89FC100D7BEE4 /* LaunchScreen.storyboard */,
@@ -139,9 +150,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE0FD86F1DF89FC100D7BEE4 /* SecondViewController.swift in Sources */,
+				4F4DEF011E002E0800ABD29E /* SecondViewController.swift in Sources */,
+				4F4DEF031E002E3900ABD29E /* BaseViewController.swift in Sources */,
 				CE0FD86B1DF89FC100D7BEE4 /* AppDelegate.swift in Sources */,
-				CE0FD86D1DF89FC100D7BEE4 /* FirstViewController.swift in Sources */,
+				4F4DEF001E002E0800ABD29E /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -303,6 +315,7 @@
 				CE0FD87D1DF89FC100D7BEE4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
