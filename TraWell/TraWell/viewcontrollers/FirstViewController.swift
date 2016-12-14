@@ -21,7 +21,7 @@ class FirstViewController: BaseViewController {
         // table view setup
         self.tableViewPlaces.delegate = self
         self.tableViewPlaces.dataSource = self
-        self.tableViewPlaces.register(UITableViewCell.classForCoder(), forCellReuseIdentifier: kCellDefault)
+        self.tableViewPlaces.registerClass(UITableViewCell.classForCoder(), forCellReuseIdentifier: kCellDefault)
         self.tableViewPlaces.showsVerticalScrollIndicator = false
         
         // places and favorite places initialization
@@ -51,41 +51,41 @@ class FirstViewController: BaseViewController {
 
 extension FirstViewController: UITableViewDataSource, UITableViewDelegate {
     
-    func numberOfSections(in tableView: UITableView) -> Int {
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 2
     }
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
     }
     
-    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+    func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let view: UIView = UIView(frame: CGRect(x: 0, y: 0, width: tableView.frame.width, height: 44.0))
-        view.backgroundColor = UIColor.white
+        view.backgroundColor = UIColor.whiteColor()
         let label: UILabel = UILabel(frame: CGRect(origin: CGPoint(x: kInsetOffset, y: 0), size: view.frame.size))
-        label.backgroundColor = UIColor.white
+        label.backgroundColor = UIColor.whiteColor()
         label.text = (section == 0) ? "Just for the weekend" : "Airbnb Favorites"
         view.addSubview(label)
         return view
     }
     
-    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+    func tableView(tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
         let view: UIView = UIView(frame: CGRect(x: 0, y: 0, width: tableView.frame.width, height: 2.0))
-        view.backgroundColor = UIColor.lightGray
+        view.backgroundColor = UIColor.lightGrayColor()
         return view
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: kCellTableView, for: indexPath) as? PlaceTableViewCell
-        cell?.backgroundColor = UIColor.clear
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier(kCellTableView, forIndexPath: indexPath) as? PlaceTableViewCell
+        cell?.backgroundColor = UIColor.clearColor()
         return cell!
     }
     
-    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+    func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
         guard let placeTableViewCell = cell as? PlaceTableViewCell else {
             return
         }
-        placeTableViewCell.setCollectionViewDataSourceDelegate(dataSourceDelegate: self, forRow: indexPath.section)
+        placeTableViewCell.setCollectionViewDataSourceDelegate(self, delegate: self, forRow: indexPath.section)
     }
     
     /*
@@ -99,15 +99,14 @@ extension FirstViewController: UITableViewDataSource, UITableViewDelegate {
 
 extension FirstViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if collectionView.tag == 0 {
             return self.places.count
         }
         return self.favoritePlaces.count
     }
     
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        
+    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         var places:[Place] = [Place]()
         if collectionView.tag == 0 {
             places = self.places
@@ -115,7 +114,7 @@ extension FirstViewController: UICollectionViewDataSource, UICollectionViewDeleg
             places = self.favoritePlaces
         }
         
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: kCellCollectionView, for: indexPath) as? PlaceCollectionViewCell
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(kCellCollectionView, forIndexPath: indexPath) as? PlaceCollectionViewCell
         if let image = UIImage(named: places[indexPath.row].imageName ?? "") {
             cell?.imageViewPlace.image = image
         } else if let image = UIImage(named: "placeholder") {
@@ -123,9 +122,10 @@ extension FirstViewController: UICollectionViewDataSource, UICollectionViewDeleg
         }
         cell?.labelPlace.text = places[indexPath.row].name ?? ""
         return cell!
+
     }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+
+    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAtIndex section: Int) -> UIEdgeInsets {
         return UIEdgeInsets(top: 0, left: kInsetOffset, bottom: 0, right: kInsetOffset)
     }
 

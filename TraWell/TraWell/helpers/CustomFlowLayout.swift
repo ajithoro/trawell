@@ -21,8 +21,7 @@ class CustomFlowLayout: UICollectionViewFlowLayout {
         fatalError("init(coder:) has not been implemented")
     }
     
-    override func targetContentOffset(forProposedContentOffset proposedContentOffset: CGPoint, withScrollingVelocity velocity: CGPoint) -> CGPoint {
-        
+    override func targetContentOffsetForProposedContentOffset(proposedContentOffset: CGPoint, withScrollingVelocity velocity: CGPoint) -> CGPoint {
         // centering collection view cell after scrolling
         let itemsCount = self.collectionView?.dataSource?.collectionView(self.collectionView!, numberOfItemsInSection: 0)
         if ((self.previousOffset > (self.collectionView?.contentOffset.x)!) && (velocity.x < 0.0)) {
@@ -34,6 +33,7 @@ class CustomFlowLayout: UICollectionViewFlowLayout {
         let updatedOffset:CGFloat = (self.itemSize.width + self.minimumInteritemSpacing) * CGFloat(self.currentPage)
         self.previousOffset = updatedOffset;
         return CGPoint(x: updatedOffset, y: proposedContentOffset.y)
+
     }
     
 }
