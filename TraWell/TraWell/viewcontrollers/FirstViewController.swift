@@ -17,11 +17,14 @@ class FirstViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        // table view setup
         self.tableViewPlaces.delegate = self
         self.tableViewPlaces.dataSource = self
         self.tableViewPlaces.register(UITableViewCell.classForCoder(), forCellReuseIdentifier: kCellDefault)
         self.tableViewPlaces.showsVerticalScrollIndicator = false
         
+        // places and favorite places initialization
         let bangalore:Place = Place(name: "Bangalore", imageName: "bangalore")
         let chennai:Place = Place(name: "Chennai", imageName: "chennai")
         let kolkata:Place = Place(name: "Kolkata", imageName: "kolkata")

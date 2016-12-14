@@ -9,7 +9,10 @@
 import Foundation
 import CoreGraphics
 
+// cell identifiers
 let kCellTableView: String = "CellTableView"
 let kCellCollectionView: String = "CellCollectionView"
 let kCellDefault: String = "CellDefault"
+
+// inset offset
 let kInsetOffset: CGFloat = 30.0

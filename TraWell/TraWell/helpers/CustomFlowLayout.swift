@@ -23,6 +23,7 @@ class CustomFlowLayout: UICollectionViewFlowLayout {
     
     override func targetContentOffset(forProposedContentOffset proposedContentOffset: CGPoint, withScrollingVelocity velocity: CGPoint) -> CGPoint {
         
+        // centering collection view cell after scrolling
         let itemsCount = self.collectionView?.dataSource?.collectionView(self.collectionView!, numberOfItemsInSection: 0)
         if ((self.previousOffset > (self.collectionView?.contentOffset.x)!) && (velocity.x < 0.0)) {
             self.currentPage = max(self.currentPage - 1, 0)
